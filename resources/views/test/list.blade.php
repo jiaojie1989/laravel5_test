@@ -29,6 +29,7 @@
         @endforeach
             </tbody>
           </table>
+            {{ $render }}
         </div>
     @endif
 @stop

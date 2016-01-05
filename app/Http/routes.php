@@ -16,8 +16,20 @@ Route::get('/', function () {
 });
 
 Route::get("/test", function() {
-    $listModel = new Jiaojie\Models\Hours();
-    return view("test.test2", ["lists" => $listModel->all()]);
+//    $listModel = new Jiaojie\Models\Hours();
+//    $data = DB::table("more_work_count")->paginate(15);
+//    var_dump($data);exit;
+//    $all = Jiaojie\Models\Hours::paginate(10);
+//    var_dump($all);exit;
+    $some = Jiaojie\Models\Hours::where("day", ">", "1999-01-10");//->paginate(10);
+    var_dump($some);exit;
+    return view("test.list", ["lists" => $some, "render" => $some->render()]);
+});
+
+Route::get("/redis", function() {
+    $redis = LaravelRedis::connection();
+    var_dump($redis->info());
+    exit;
 });
 
 /*
