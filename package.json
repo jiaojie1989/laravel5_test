@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5",
+    "gulp": "^3.8.8"
+  },
+  "dependencies": {
+    "laravel-elixir": "^4.0.0",
+    "bootstrap-sass": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
